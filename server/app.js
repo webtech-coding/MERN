@@ -14,7 +14,7 @@ app.use(express.json())
 /**
  * API ROUTES
  */
-const authRouter = require('./rotues/authRoutes')
+const authRouter = require('./routes/authRoutes')
 app.use('/api/norded/auth', authRouter)
 
 app.get('/', (req, res) => {
