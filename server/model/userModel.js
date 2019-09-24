@@ -2,7 +2,7 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const mongoose = require('./../database')
+const mongoose = require('../database')
 
 const schema = mongoose.Schema({
   //TODO : UPDATE THE SCHEMA AS REQUIRED
@@ -51,5 +51,5 @@ schema.methods.comparePassword = async function(password) {
   return await bcrypt.compare(password, this.password)
 }
 
-const User = mongoose.model('Usre', schema)
+const User = mongoose.model('User', schema)
 module.exports = User
