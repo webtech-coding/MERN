@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 /**
  * Routing components
  */
-import Home from './components/home'
+import Home from './components/home/'
 
 const Routes = () => {
   return (
