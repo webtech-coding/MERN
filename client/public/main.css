@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina:100,400,600|Open+Sans:400,600|Roboto:300,400,500,700|Architects+Daughter&display=swap');
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -293,11 +302,36 @@ h4 {
   }
 }
 
+.spinner {
+  border: 0.3125rem solid #b8b8b8;
+  border-top: 0.3125rem solid #359ded;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 6.25rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .topcontent {
-  position: relative;
-  color: #fff;
   width: 900px;
   margin: 0 auto;
+  position: relative;
+  color: #fff;
+}
+@media only screen and (max-width: 62.5rem) {
+  .topcontent {
+    width: 90%;
+    margin: 0 5%;
+  }
 }
 .topcontent__header {
   padding-top: 5rem;
@@ -319,10 +353,4 @@ h4 {
   top: 0;
   right: 0;
   z-index: -1;
-}
-@media only screen and (max-width: 62.5rem) {
-  .topcontent {
-    width: 90%;
-    margin: 0 5%;
-  }
 }

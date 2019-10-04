@@ -9,6 +9,8 @@ import { Provider } from 'react-redux'
 import Routes from './routes'
 import MasterLayout from './components/hoc/masterLayout'
 
+import Reducers from './redux/reducers'
+
 const createStoreWithMiddleware = applyMiddleware(
   ReduxThunk,
   promiseMiddleware
@@ -17,7 +19,7 @@ const createStoreWithMiddleware = applyMiddleware(
 ReactDOM.render(
   <Provider
     store={createStoreWithMiddleware(
-      //TODO : IMPORT COMBINED REDUX HERE
+      Reducers,
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )}

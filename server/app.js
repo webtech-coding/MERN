@@ -17,6 +17,9 @@ app.use(express.json())
 const authRouter = require('./routes/authRoutes')
 app.use('/api/norded/auth', authRouter)
 
+const categoryRouter = require('./routes/categoryRoutes')
+app.use('/api/norded/category', categoryRouter)
+
 app.get('/', (req, res) => {
   //TODO : REMOVE THIS LINK ON DEVELOPMENT
   res.status(200).json({
